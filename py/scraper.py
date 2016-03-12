@@ -69,5 +69,3 @@ def finalScraper(movieData):
 			"criticConsensus": rotten["criticConsensus"],
 			"reviews": rotten["reviews"]
 		   }
-
-print(finalScraper("Gone Girl"))

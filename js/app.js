@@ -12,7 +12,8 @@ app.controller('MainController', function($scope, $http) {
 	    transformRequest: angular.identity
 		}).then(function(data) {
 			$scope.flag = true;
-			$scope.movieData = data
+			$scope.movieData = data;
+			console.log(data);
 		});
 	};
 	$scope.flag = false;

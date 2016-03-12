@@ -27,5 +27,3 @@ def get_guess():
                ]
     counts = [guesses.count(guess) for guess in guesses]
     return guesses[count.index(max(count))]
-
-print(get_guess())

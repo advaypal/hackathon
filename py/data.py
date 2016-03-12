@@ -22,7 +22,7 @@ if filedata.file:
 
 
 #image manipulation function which returns movieData
-
+movieData = get_guess()
 
 movieDatadict = finalScraper(movieData)
 jsonData = json.dumps(movieDatadict)
