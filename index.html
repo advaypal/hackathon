@@ -11,6 +11,7 @@
     <div class="container">
       <div class="jumbotron">
         <h4> Ever seen a movie poster and wanted to know more? Just snap an image and we'll do the rest. </h4>
+<<<<<<< HEAD
       </div>
     </div>
     <div class ="container">
@@ -62,16 +63,22 @@
     </div>
 
 
+=======
+      </div>
+    </div>
+    <div ng-show="flag">
+    </div>
+>>>>>>> 1e98f8e47154d7b3886ffc095707e6d7e0954628
     <div class="container">
         <form ng-submit="scrapePic()" >
         <!-- <form action="py/data.py" method="post" enctype="multipart/form-data"> -->
           <div class="form-group">
             <!-- <input type="file" id="file" name="upload" accept="image/*;capture=camera"> -->
-            <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
+            <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)" accept="image/*;capture=camera"/>
             <div>
               <button type="submit" class="btn btn-primary">Submit</button>
             </div>
-          </div>  
+          </div>
         </form>
     </div>
   </body>
