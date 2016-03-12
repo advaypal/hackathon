@@ -3,13 +3,13 @@ import os
 
 app = Flask(__name__)
 
-#@app.route('/')
-#def index():
-#    return render_template('index.html')
-
-@app.route('/favicon.ico')
+@app.route('/')
 def index():
     return render_template('index.html')
+
+#@app.route('/favicon.ico')
+#def index():
+#    return render_template('index.html')
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
