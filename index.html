@@ -8,36 +8,22 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
   </head>
   <body ng-app="MovieSearch" ng-controller="MainController">
-    <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar">
-      <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="main_navbar" style="height: auto">
-          <ul class="nav navbar-nav">
-          </ul>
+      <div class="container">
+        <div class="jumbotron">
+          <h4> Ever seen a movie poster and wanted to know more? Just snap an image and we'll do the rest. </h4>
         </div>
       </div>
-    </nav>
     <div class="container">
-      <div class="row" style="text-align:center">
-        <form ng-submit="scrape()">
+        <form ng-submit="scrapePic()" >
+        <!-- <form action="py/data.py" method="post" enctype="multipart/form-data"> -->
           <div class="form-group">
-            <label>Movie Data:</label>
-            <input type="text" ng-model="movieData" required />
-          </div>
-          <div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </div>
+            <!-- <input type="file" id="file" name="upload" accept="image/*;capture=camera"> -->
+            <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
+            <div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>  
         </form>
-      </div>
     </div>
-    <form ng-submit="scrapePic()" >
-    <!-- <form action="py/data.py" method="post" enctype="multipart/form-data"> -->
-      <div class="form-group">
-        <!-- <input type="file" id="file" name="upload" accept="image/*;capture=camera"> -->
-        <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
-      </div>
-      <div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </div>
-    </form>
   </body>
 </html>
