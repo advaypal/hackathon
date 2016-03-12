@@ -25,6 +25,8 @@ if filedata.file:
 
 
 movieDatadict = finalScraper(movieData)
+jsonData = json.dumps(movieDatadict)
+print(jsonData)
 #convet this dict to json and send to angular
 
 
