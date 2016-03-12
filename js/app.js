@@ -2,7 +2,7 @@ var app = angular.module('MovieSearch', []);
 
 app.controller('MainController', function($scope, $http) {
 	var fd = new FormData();
-	$scope.movieData = null
+	$scope.movieData = null;
 	$scope.scrapePic = function() {
 		$http({
 			method: 'POST',
