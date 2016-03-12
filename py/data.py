@@ -16,5 +16,3 @@ message = scraper(request['movieData'])
 
 # message = json.dumps({'Status': 'Error :('})
 print(message)
-
-db.close()
