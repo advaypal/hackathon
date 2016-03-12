@@ -8,21 +8,23 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
   </head>
   <body ng-app="MovieSearch" ng-controller="MainController">
-      <div class="container">
-        <div class="jumbotron">
-          <h4> Ever seen a movie poster and wanted to know more? Just snap an image and we'll do the rest. </h4>
-        </div>
+    <div class="container">
+      <div class="jumbotron">
+        <h4> Ever seen a movie poster and wanted to know more? Just snap an image and we'll do the rest. </h4>
       </div>
+    </div>
+    <div ng-show="flag">
+    </div>
     <div class="container">
         <form ng-submit="scrapePic()" >
         <!-- <form action="py/data.py" method="post" enctype="multipart/form-data"> -->
           <div class="form-group">
             <!-- <input type="file" id="file" name="upload" accept="image/*;capture=camera"> -->
-            <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
+            <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)" accept="image/*;capture=camera"/>
             <div>
               <button type="submit" class="btn btn-primary">Submit</button>
             </div>
-          </div>  
+          </div>
         </form>
     </div>
   </body>
