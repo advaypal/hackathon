@@ -26,13 +26,34 @@ def rottentomatoScraper(movieData):
 	url = result[0]['url']
 	r = urllib.urlopen (url).read()
 	soup = BeautifulSoup(r)
-	#add image
+	#add image, cast members, genre, reviews
 	criticConsensus = soup.find("div", {"class": "critic_consensus tomato-info noSpacing superPageFontColor"}).contents[0]
 	criticRating = soup.find("span", {'itemprop': "ratingValue"}).contents[0]
 	userRating = soup.find("span", {'itemprop': "ratingValue"}).contents[1]
 	return {"criticConsensus": criticConsensus, "criticRating": criticRating,
 	"userRating": userRating, }
+
+def finalScraper(movieData):
+	imdb = imdbscraper(movieData)
+	rotten = rottentomatoScraper(movieData)
+	return { "name": imdb["name"],
+			 "image": ####[rotten["image"]], 
+			 "ratings": [imdb["rating"], rotten["criticRating"], rotten["userRating"]], 
+			 "storyline": imdb["storyline"],
+			 "cast": ############
+			 "genre": ############
+			 "runtime": imdb["runtime"],
+			 "pgrating" : imdb["pgrating"],
+			 "releasedate": imdb["releasedate"],
+			 "criticConsensus": imdb["crticConsensus"]
+			 }
+
+
+
+
 	
-}
+
+
+
 
 
