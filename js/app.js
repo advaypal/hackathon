@@ -2,6 +2,7 @@ var app = angular.module('MovieSearch', []);
 
 app.controller('MainController', function($scope, $http) {
 	var fd = new FormData();
+	$scope.movieData = null
 	$scope.scrapePic = function() {
 		$http({
 			method: 'POST',
@@ -11,6 +12,7 @@ app.controller('MainController', function($scope, $http) {
 	    transformRequest: angular.identity
 		}).then(function(data) {
 			$scope.flag = true;
+			$scope.movieData = data
 		});
 	};
 	$scope.flag = false;

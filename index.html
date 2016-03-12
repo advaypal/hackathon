@@ -8,11 +8,60 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
   </head>
   <body ng-app="MovieSearch" ng-controller="MainController">
-      <div class="container">
-        <div class="jumbotron">
-          <h4> Ever seen a movie poster and wanted to know more? Just snap an image and we'll do the rest. </h4>
+    <div class="container">
+      <div class="jumbotron">
+        <h4> Ever seen a movie poster and wanted to know more? Just snap an image and we'll do the rest. </h4>
+      </div>
+    </div>
+    <div class ="container">
+      <div class="movie-info" ng-show="flag">
+        <div class="row">
+          <div class="col-md-6">
+            <img> </img>
+          </div>
+          <div class="col-md-6">
+            <div class="name">
+              <h3> {{movieData.name}}</h3>
+            </div>
+            <div class="ratings">
+              <div class ="row">
+                <div class = "col-md-2">
+                  <h5> {{movieData.ratings[0]}}</h5>
+                </div>
+                <div class = "col-md-2">
+                  <h5> {{movieData.ratings[1]}}</h5>
+                </div>
+                <div class = "col-md-2">
+                  <h5> {{movieData.ratings[2]}}</h5>
+                </div>
+              </div>
+            </div>
+            <div class="storyline">
+              <p> {{movieData.storyline}} </p>
+            </div>
+            <div class="cast">
+
+            </div>
+            <div class="other">
+              <div class = "row">
+                <div class="col-md-2">
+                  <p> {{movieData.genre}} </p>
+                </div>
+                <div class="col-md-2">
+                  <p> {{movieData.pgrating}} </p>
+                </div>
+                <div class="col-md-2">
+                  <p> {{movieData.runtime}} </p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="review">
         </div>
       </div>
+    </div>
+
+
     <div class="container">
         <form ng-submit="scrapePic()" >
         <!-- <form action="py/data.py" method="post" enctype="multipart/form-data"> -->
