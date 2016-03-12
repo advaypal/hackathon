@@ -56,3 +56,5 @@ def finalScraper(movieData):
 			"criticConsensus": imdb["criticConsensus"],
 			"reviews": rotten["reviews"]
 		   }
+
+print(finalScraper("Gone Girl"))
