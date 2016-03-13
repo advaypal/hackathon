@@ -23,7 +23,7 @@ def image_search(image_url):
 
 def get_guess():
     image_crop()
-    guesses = [image_search("main.jpg"),
+    guesses = [image_search("https://fathomless-lake-87854.herokuapp.com/img/"),
                image_search("crop1.jpg"),
                image_search("crop2.jpg"),
                image_search("crop3.jpg"),
@@ -31,3 +31,4 @@ def get_guess():
                ]
     counts = [guesses.count(guess) for guess in guesses]
     return guesses[count.index(max(count))]
+    return image_search("")

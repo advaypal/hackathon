@@ -14,15 +14,8 @@ def images():
 
 @app.route('/data', methods=['POST'])
 def py_file():
-    # return request.json["hey"]
-    # return request.form.get("hey", "none")
     filedata = request.files['file']
-    write_img(filedata)
-    # return send_from_directory('py', "filename")
-
-#@app.route('/favicon.ico')
-#def index():
-#    return render_template('index.html')
+    return write_img(filedata)
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))

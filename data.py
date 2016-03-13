@@ -21,17 +21,8 @@ def write_img(filedata):
     outfile = open("static/img/main.jpg", "w")
     filedata.save(outfile)
 
-    movieData = get_guess()
+    movieData = image_search("https://fathomless-lake-87854.herokuapp.com/img")
 
     movieDatadict = finalScraper(movieData)
     jsonData = json.dumps(movieDatadict)
-    return jsonify(jsonData)
-
-#image manipulation function which returns movieData
-
-#convet this dict to json and send to angular
-
-
-
-# message = json.dumps({'Status': 'Error :('})
-# print(message)
+    return json.stringify(jsonData)
