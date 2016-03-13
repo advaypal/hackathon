@@ -17,7 +17,7 @@ app.controller('MainController', function($scope, $http) {
 		// });
 		$http({
 			method: 'POST',
- 			url: '../data.py',
+ 			url: '/data.py',
  			data: {
 				hey: "bye"
 			},
