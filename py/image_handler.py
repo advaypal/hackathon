@@ -2,8 +2,8 @@
 # -*- coding: UTF-8 -*-
 # enable debugging
 
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
+# from selenium import webdriver
+# from selenium.webdriver.common.keys import Keys
 from PIL import Image
 
 def image_crop():

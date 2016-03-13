@@ -4,7 +4,7 @@
 
 # import cgi, cgitb, sys, json
 from scraper import *
-from image_handler import *
+# from image_handler import *
 
 # cgitb.enable()
 # print "Content-type: text/json"
