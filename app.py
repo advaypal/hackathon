@@ -14,6 +14,7 @@ def images():
 
 @app.route('/data.py', methods=['POST'])
 def py_file():
+    return request.form
     return write_img(request.form.value[0])
     # return send_from_directory('py', "filename")
 
