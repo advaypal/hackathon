@@ -12,10 +12,12 @@ def index():
 def images():
     return send_from_directory('static/img', "main.jpg")
 
-@app.route('/data.py', methods=['POST'])
+@app.route('/data', methods=['POST'])
 def py_file():
-    return request.form
-    # return write_img(request.form.value[0])
+    # return request.json["hey"]
+    # return request.form.get("hey", "none")
+    filedata = request.files['file']
+    write_img(filedata)
     # return send_from_directory('py', "filename")
 
 #@app.route('/favicon.ico')

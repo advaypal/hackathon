@@ -18,15 +18,14 @@ from image_handler import *
 # take input form main page
 # filedata = cgi.FieldStorage().value[0]
 def write_img(filedata):
-    if filedata.file:
-        outfile = open("../static/img/main.jpg", "w")
-        outfile.write(filedata.file.read())
+    outfile = open("static/img/main.jpg", "w")
+    filedata.save(outfile)
 
     movieData = get_guess()
 
     movieDatadict = finalScraper(movieData)
     jsonData = json.dumps(movieDatadict)
-    return jsonData
+    return jsonify(jsonData)
 
 #image manipulation function which returns movieData
 
