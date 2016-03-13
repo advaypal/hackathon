@@ -12,7 +12,7 @@ def index():
 def images():
     return send_from_directory('static/img', "main.jpg")
 
-@app.route('/py/data.py', method=['POST'])
+@app.route('/py/data.py', methods=['POST'])
 def py_file():
     return write_img(request.form.value[0])
     # return send_from_directory('py', "filename")
