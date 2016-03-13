@@ -1,6 +1,6 @@
 from flask import Flask, render_template, send_from_directory, request
 import os
-from .py.data import write_img
+from data import write_img
 
 app = Flask(__name__)
 
@@ -12,7 +12,7 @@ def index():
 def images():
     return send_from_directory('static/img', "main.jpg")
 
-@app.route('/py/data.py', methods=['POST'])
+@app.route('/data.py', methods=['POST'])
 def py_file():
     return write_img(request.form.value[0])
     # return send_from_directory('py', "filename")
