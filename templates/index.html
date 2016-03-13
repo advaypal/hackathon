@@ -6,6 +6,7 @@
     <script type="text/javascript" src="../static/js/app.js"></script>
     <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../static/css/styles.css" />
+    <meta name=viewport content="width=device-width, initial-scale=1">
   </head>
   <body ng-app="MovieSearch" ng-controller="MainController">
     <div class="container">
@@ -18,7 +19,7 @@
       <div class="movie-info" ng-show="flag">
         <div class="row">
           <div class="col-md-6">
-            <img></img>
+            <img src="{{movieData.image}}"> </img>
           </div>
           <div class="col-md-6">
             <div class="name">
