@@ -61,7 +61,7 @@ def rottentomatoScraper(movieData):
 def finalScraper(movieData):
 	imdb = imdbscraper(movieData)
 	rotten = rottentomatoScraper(movieData)
-	return {"name": imdb["name"],
+	return {"name": imdb["name"].replace("&nbsp;", ""),
 			"image": rotten["image"],
 			"ratings": [imdb["rating"], rotten["criticRating"], rotten["userRating"]],
 			"storyline": imdb["storyline"],
