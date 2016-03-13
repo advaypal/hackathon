@@ -11,6 +11,10 @@ def index():
 def images():
     return send_from_directory('static/img', "main.jpg")
 
+@app.route('/py/<path:filename>')
+def py_file(filename):
+    return send_from_directory('py', "filename")
+
 #@app.route('/favicon.ico')
 #def index():
 #    return render_template('index.html')
