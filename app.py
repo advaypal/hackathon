@@ -15,7 +15,7 @@ def images():
 @app.route('/data.py', methods=['POST'])
 def py_file():
     return request.form
-    return write_img(request.form.value[0])
+    # return write_img(request.form.value[0])
     # return send_from_directory('py', "filename")
 
 #@app.route('/favicon.ico')
@@ -24,4 +24,4 @@ def py_file():
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
+    app.run(host='0.0.0.0', port=port, debug=True)
