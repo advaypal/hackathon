@@ -4,6 +4,7 @@
 
 import cgi, cgitb, sys, json
 from scraper import *
+from image_handler import *
 
 cgitb.enable()
 print "Content-type: text/json"
@@ -17,9 +18,8 @@ print
 # take input form main page
 filedata = cgi.FieldStorage().value[0]
 if filedata.file:
-    outfile = open("main.jpg", "w")
+    outfile = open("../static/img/main.jpg", "w")
     outfile.write(filedata.file.read())
-
 
 #image manipulation function which returns movieData
 movieData = get_guess()

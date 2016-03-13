@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+# enable debugging
+
 from BeautifulSoup import *
 import urllib, json
 
