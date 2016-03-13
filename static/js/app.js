@@ -6,7 +6,7 @@ app.controller('MainController', function($scope, $http) {
 	$scope.scrapePic = function() {
 		$http({
 			method: 'POST',
- 			url: '../py/data.py',
+ 			url: '../../py/data.py',
  			data: fd,
 			headers: {'Content-Type': undefined},
 	    transformRequest: angular.identity
