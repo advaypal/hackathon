@@ -47,7 +47,7 @@
             <div class="other">
               <div class = "row">
                 <div class="col-md-2" ng-repeat="genre in movieData.genres" style="float:left">
-                  {genre}}
+                  {{genre}}
                 </div>
                 <div class="col-md-2">
                   <p> {{movieData.pgrating}} </p>
@@ -65,12 +65,12 @@
     </div>
     {% endraw %}
         <div class="container">
-        <form ng-submit="scrapePic()" > 
+        <form ng-submit="scrapePic()" >
         <!-- <form action="py/data.py" method="post" enctype="multipart/form-data"> -->
           <div class="form-group">
             <!-- <input type="file" id="file" name="upload" accept="image/*;capture=camera"> -->
             <!-- <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)" accept="image/*;capture=camera"/> -->
-          <input>  </input>
+          <input type="text" ng-model="movieName"></input>
           <div>
               <button type="submit" class="btn btn-primary">Submit</button>
             </div>

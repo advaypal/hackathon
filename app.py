@@ -14,8 +14,8 @@ def images():
 
 @app.route('/data', methods=['POST'])
 def py_file():
-    filedata = request.files['file']
-    return write_img(filedata)
+    movieName = request.json['movieName']
+    return write_img(movieName)
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))

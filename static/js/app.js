@@ -1,23 +1,24 @@
 var app = angular.module('MovieSearch', []);
 
 app.controller('MainController', function($scope, $http) {
-	var fd = new FormData();
-	$scope.movieData = {};
+	// var fd = new FormData();
+	$scope.movieName = null;
 	$scope.scrapePic = function() {
 		$http({
 			method: 'POST',
  			url: '/data',
- 			data: fd,
-			headers: {'Content-Type': undefined},
-	    transformRequest: angular.identity
+ 			data: {
+				movieName: $scope.movieName
+			},
+			dataType: 'json'
 		}).then(function(data) {
 			$scope.flag = true;
-			$scope.movieData = data;
+			$scope.movieData = data.data;
 			console.log(data);
 		});
 	};
 	$scope.flag = false;
-	$scope.uploadFile = function(files) {
-    fd.append("file", files[0]);
-	};
+	// $scope.uploadFile = function(files) {
+  //   fd.append("file", files[0]);
+	// };
 });

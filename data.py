@@ -17,13 +17,13 @@ from image_handler import *
 
 # take input form main page
 # filedata = cgi.FieldStorage().value[0]
-def write_img(filedata):
-	
+def write_img(fileData):
+
     # outfile = open("static/img/main.jpg", "w")
     # filedata.save(outfile)
 
     # movieData = image_search("https://fathomless-lake-87854.herokuapp.com/img")
     ###
-    movieDatadict = finalScraper(fileData) #finalScraper(movieData)
-    jsonData = json.dumps(movieDatadict)
-    return json.stringify(jsonData)
+	movieDatadict = finalScraper(fileData) #finalScraper(movieData)
+	jsonData = json.dumps(movieDatadict)
+	return jsonData
