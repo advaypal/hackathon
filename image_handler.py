@@ -15,7 +15,7 @@ def image_crop():
     main.crop(0, 0, 3 * size[0] / 4, size[1]).save("crop1.jpg")
 
 def image_search(image_url):
-    driver = webdriver.Chrome("./")
+    driver = webdriver.Chrome(executable_path=r"./")
     driver.get("https://www.google.com/searchbyimage?&image_url=" + image_url)
     guess = driver.find_element_by_class_name("_gUb").text
     driver.close()
