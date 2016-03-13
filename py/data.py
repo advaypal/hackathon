@@ -17,7 +17,7 @@ from image_handler import *
 
 # take input form main page
 # filedata = cgi.FieldStorage().value[0]
-def write_img():
+def write_img(filedata):
     if filedata.file:
         outfile = open("../static/img/main.jpg", "w")
         outfile.write(filedata.file.read())
