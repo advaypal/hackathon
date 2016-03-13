@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env bash
 # -*- coding: UTF-8 -*-
 # enable debugging
 
