@@ -9,7 +9,7 @@ def index():
 
 @app.route('/img')
 def images():
-    return send_from_directory('img', "main.jpg")
+    return send_from_directory('static/img', "main.jpg")
 
 #@app.route('/favicon.ico')
 #def index():
