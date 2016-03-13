@@ -2,13 +2,13 @@
 # -*- coding: UTF-8 -*-
 # enable debugging
 
-import cgi, cgitb, sys, json
+# import cgi, cgitb, sys, json
 from scraper import *
 from image_handler import *
 
-cgitb.enable()
-print "Content-type: text/json"
-print
+# cgitb.enable()
+# print "Content-type: text/json"
+# print
 # print "Content-Type: application/html;charset=utf-8"
 #
 # request = json.loads(cgi.FieldStorage().value)
@@ -16,17 +16,20 @@ print
 
 
 # take input form main page
-filedata = cgi.FieldStorage().value[0]
-if filedata.file:
-    outfile = open("../static/img/main.jpg", "w")
-    outfile.write(filedata.file.read())
+# filedata = cgi.FieldStorage().value[0]
+def write_img():
+    if filedata.file:
+        outfile = open("../static/img/main.jpg", "w")
+        outfile.write(filedata.file.read())
+
+    movieData = get_guess()
+
+    movieDatadict = finalScraper(movieData)
+    jsonData = json.dumps(movieDatadict)
+    return jsonData
 
 #image manipulation function which returns movieData
-movieData = get_guess()
 
-movieDatadict = finalScraper(movieData)
-jsonData = json.dumps(movieDatadict)
-print(jsonData)
 #convet this dict to json and send to angular
 
 
