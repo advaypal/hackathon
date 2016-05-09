@@ -6,4 +6,3 @@ Branch backup(currently hosted) performs the same scraping function but with mov
 
 Application hosted at https://fathomless-lake-87854.herokuapp.com/
 
-(Can be used on mobile as well)
